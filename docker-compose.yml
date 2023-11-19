@@ -1,0 +1,17 @@
+version: '3'
+services:
+  fastapi:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: fastapi
+    ports:
+      - 80:80
+  bot:
+    build:
+      context: .
+      dockerfile: ./bot/Dockerfile
+    container_name: bot
+    ports:
+      - 443:443
+    
